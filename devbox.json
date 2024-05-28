@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.10.7/.schema/devbox.schema.json",
+  "packages": [
+    "maven@3.9.6",
+    "temurin-bin@21.0.1"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to devbox!' > /dev/null"
+    ],
+    "scripts": {
+      "verify": [
+        "java -version",
+        "mvn --version"
+      ],
+      "build": [
+        "mvn clean install"
+      ]
+    }
+  }
+}
