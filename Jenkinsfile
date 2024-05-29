@@ -1,6 +1,11 @@
 pipeline {
   agent any
   stages {
+    stage('verify devbox installation') {
+      steps {
+        sh 'devbox version'
+      }
+    }
     stage("verify tool installation on agent") {
       steps {
         sh '''
